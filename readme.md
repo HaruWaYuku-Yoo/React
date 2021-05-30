@@ -216,7 +216,7 @@ Class를 상속받아서 사용할 때 super class 생성자를 호출하여 par
 ----
 ## Props
 컴포넌트 내부의 변화하지 않는 데이터를 처리할 때 사용한다.
-<img src ="Pictures/Props.png">
+<img src ="Pictures/props.png">
 
 ## Props의 기본 값 설정
 
