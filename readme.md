@@ -3,6 +3,9 @@
 --------------------------------------
 ## React.js
 
+------
+<a href ="https://www.youtube.com/watch?v=BYbgopx44vo"> React and the Virtual DOM</a>
+
 ## React
 유저인터페이스를 만들기 위한 라이브러리 <프레임워크x>
 
@@ -19,12 +22,12 @@
 ## 서버 사이드 렌더링
 요청시마다 새로고침이 일어나며, 서버에 새로운 페이지에 대한 요청을 하는 방식 (예를 들면 필요한물건이 생길때마다 마트에 물건을 사러 일일히 왓다갓다 하는 방식)
 
-<img src ="ServerSideRendering.png">
+<img src ="Pictures/ServerSideRendering.png">
 
 ## Single Page Application(SPA) 구동 방식
 처음에 하나의 빈 페이지만 서버측에서 제공하고, View에 대해서는 Client에서 자바스크립트를 통해 렌더링 하는 방식  == 클라이언트 렌더링
 
-<img src ="SPA.png">
+<img src ="Pictures/SPA.png">
 
 ## 단점
 View Only <보이는것에만 관여> = 빠진부분은 다른 라이브러리를 이용하여 구현해야함 / IE8이하 지원x
@@ -132,7 +135,7 @@ Class를 상속받아서 사용할 때 super class 생성자를 호출하여 par
 모든 React 컴포넌트에 존재하는 메소드로서, 컴포넌트가 어떻게 생길지 정의해주는 역할
 
 ----------
-<img src = "JSX.png">
+<img src = "Pictures/JSX.png">
 
 ## JSX의 특징
 
@@ -169,7 +172,7 @@ Class를 상속받아서 사용할 때 super class 생성자를 호출하여 par
 
 컴포넌트에서 여러 Element를 렌더링 할 때 꼭 container element안에 포함을 시켜주어야 한다. 예시로 위 코드처럼 < div > < /div > 안에 감싸주면 된다.
 
-<img src ="JSX error.png">
+<img src ="Pictures/JSX error.png">
 
 ### JSX에서 자바스크립트를 표현하는 방법은 { } 로 감싸주면 된다.
 
@@ -213,15 +216,25 @@ Class를 상속받아서 사용할 때 super class 생성자를 호출하여 par
 ----
 ## Props
 컴포넌트 내부의 변화하지 않는 데이터를 처리할 때 사용한다.
-<img src ="Props.png">
+<img src ="Pictures/Props.png">
 
 ## Props의 기본 값 설정
 
-<img src="props 기본 값 설정.png">
+<img src="Pictures/props 기본 값 설정.png">
 컴포넌트의 선언이 끝난 후 defaultProps의 값을 설정하면 된다.
 위 코드의 경우 value값이 0으로 지정되어 있음.
 
 ## Props의 type 검증
 
-<img src ="props type검증.png">
+<img src ="Pictures/props type검증.png">
 마찬가지로 type검증 또한 컴포넌트의 선언 이후, propTypes를 선언해주면 되는데, 위 코드의 경우, 첫 번째 value값은 string, 두 번재 value 값은 숫자, 마지막 value값은 어떤 타입이던 실수로 입력이 되도록 설정이 되 있는 모습을 볼 수 있다.
+
+------
+## State
+
+State는 컴포넌트에서 유동적인 데이터를 보여줄 때 사용한다. 중요한점은 초기값 설정이 무조건!!! 필수적이다.
+
+    this.state = {} 으로 설정
+-------------
+    this.setState({...}) 의 형태로 값을 수정
+단, 렌더링 이후에는 this.state를 절대 사용해선 안된다.
